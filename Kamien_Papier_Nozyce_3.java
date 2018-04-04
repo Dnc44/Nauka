@@ -9,76 +9,76 @@ public class Kamien_Papier_Nozyce_3
 	public static void main(String[] args) 
 	{
 		System.out.println("=========================================");
-		System.out.println("Witaj w grze \"Kamień, papier, nożyce\".");
+		System.out.println("Witaj w grze \"Kamien, papier, nozyce\".");
 		System.out.println("=========================================");
 		System.out.println("                                          ");
-		System.out.println("Gra trwa do trzech zwycięstw.");
-		int wynikRemis = 0;
-		int wynikGracza = 0;
-		int wynikKomputera = 0;
+		System.out.println("Gra trwa do trzech zwyciestw.");
+		int resultDraw = 0;
+		int resultUser = 0;
+		int resultComputer = 0;
 		
-		while ((wynikGracza < 3) && (wynikKomputera < 3))
+		while ((resultUser < 3) && (resultComputer < 3))
 		{
 			
-		System.out.println("Wybierz: kamień (wybierz 1), papier (wybierz 2) lub nożyce (wybierz 3).");
+		System.out.println("Wybierz: kamien (wybierz 1), papier (wybierz 2) lub nozyce (wybierz 3).");
 		
 		Scanner input = new Scanner(System.in);
-		int gracz = input.nextInt();
+		int choiseUser = input.nextInt();
 
-			if (gracz == 1)
+			if (choiseUser == 1)
 			{
-				System.out.println("Kamień");
+				System.out.println("Kamien");
 			}
-			else if (gracz == 2)
+			else if (choiseUser == 2)
 			{
 				System.out.println("Papier");
 			}
-			else if (gracz == 3)
+			else if (choiseUser == 3)
 			{
-				System.out.println("Nożyce");
+				System.out.println("Nozyce");
 			}
 				Random random = new Random ();
-				int komputer = random.nextInt(3)+1;
+				int choiseComputer = random.nextInt(3)+1;
 				
 				System.out.println("Komputer wybiera: ");
 				
-				if (komputer == 1)
+				if (choiseComputer == 1)
 				{
-					System.out.println("Kamień");	
+					System.out.println("Kamien");	
 				}
-				else if (komputer == 2)
+				else if (choiseComputer == 2)
 				{
 					System.out.println("Papier");
 				}
-				else if (komputer == 3)
+				else if (choiseComputer == 3)
 				{
-					System.out.println("Nożyce");
+					System.out.println("Nozyce");
 				}
 				
 				System.out.println("=========================================");
 				
-					if (gracz - komputer == 0)
-					{	wynikRemis = wynikRemis +1; 
-						System.out.println("Remis. Spróbuj ponownie");
-						System.out.println("Stan gry: "+ "Remisy = "+ wynikRemis +" Wygrane Gracza = " + wynikGracza + " Wygrane Komputera = " + wynikKomputera);
+					if (choiseUser - choiseComputer == 0)
+					{	resultDraw = resultDraw +1; 
+						System.out.println("Remis. Sprobuj ponownie");
+						System.out.println("Stan gry: "+ "Remisy = "+ resultDraw +" Wygrane Gracza = " + resultUser + " Wygrane Komputera = " + resultComputer);
 					}
 				
-					else if ( gracz - komputer == -2)
-					{	wynikGracza = wynikGracza +1;
-						System.out.println("Wygrałeś! Gratulacje!");
-						System.out.println("Stan gry: "+ "Remisy = "+ wynikRemis +" Wygrane Gracza = " + wynikGracza + " Wygrane Komputera = " + wynikKomputera);
+					else if ( choiseUser - choiseComputer == -2)
+					{	resultUser = resultUser +1;
+						System.out.println("Wygrales! Gratulacje!");
+						System.out.println("Stan gry: "+ "Remisy = "+ resultDraw +" Wygrane Gracza = " + resultUser + " Wygrane Komputera = " + resultComputer);
 					}
 					
-					else if (gracz - komputer == 1)
-					{	wynikGracza = wynikGracza +1;
-						System.out.println("Wygrałeś! Gratulacje!");
-						System.out.println("Stan gry: "+ "Remisy = "+ wynikRemis +" Wygrane Gracza = " + wynikGracza + " Wygrane Komputera = " + wynikKomputera);
+					else if (choiseUser - choiseComputer == 1)
+					{	resultUser = resultUser +1;
+						System.out.println("Wygrales! Gratulacje!");
+						System.out.println("Stan gry: "+ "Remisy = "+ resultDraw +" Wygrane Gracza = " + resultUser + " Wygrane Komputera = " + resultComputer);
 					}
 					
 					else 
-					{	wynikKomputera = wynikKomputera +1;
-						System.out.println("Niestety, przegrałeś! Może następnym razem się uda!");
-						System.out.println("Stan gry: "+ "Remisy = "+ wynikRemis +" Wygrane Gracza = " + wynikGracza + " Wygrane Komputera = " + wynikKomputera);
+					{	resultComputer = resultComputer +1;
+						System.out.println("Niestety, przegrales! Moze nastepnym razem sie uda!");
+						System.out.println("Stan gry: "+ "Remisy = "+ resultDraw +" Wygrane Gracza = " + resultUser + " Wygrane Komputera = " + resultComputer);
 					}
 					
 					System.out.println("                                      ");
