@@ -3,7 +3,7 @@ package com.nauka;
 import java.util.Random;
 import java.util.Scanner;
 
-public class Kamien_Papier_Nozyce_3 
+public class Kamien_Papier_Nozyce 
 {
 
 	public static void main(String[] args) 
